@@ -103,7 +103,7 @@
 
 #align(center)[
   #figure(
-    image("orders_by_status.png", width: 66%),
+    image("orders_by_status.png", width: 77%),
     caption: [Кількість записів про замовлення за статусами]
   )
 ]

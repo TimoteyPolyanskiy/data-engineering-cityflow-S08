@@ -18,7 +18,7 @@ arch = m["archives"].get("cityflow_S08_base_v1.zip", {})
 
 # ---- конфігурація -----------------------------------------------------------
 repo = info["repo_url"]
-pr = link_or_hint(info["lab01"]["pr_url"], "Pull Request", "docs/report_meta.json: вкажіть lab01.pr_url, коли створите PR")
+pr = link_or_hint(info["lab01"]["pr_url"], info["lab01"]["pr_url"], "docs/report_meta.json: вкажіть lab01.pr_url, коли створите PR")
 sha_note = "збігається з наданою викладачем" if arch.get("matches_teacher") else "викладацька сума не записана"
 config = "\n".join([
     bullets([
@@ -29,7 +29,7 @@ config = "\n".join([
         f"Python `{m['python']}`, менеджер `uv`, pandas `{m['pandas']}`, matplotlib, jupytext (залежності зафіксовано в `pyproject.toml` і `uv.lock`).",
         f"Гілка `{info['lab01']['branch']}`, тег `{info['lab01']['tag']}`.",
     ]),
-    f"- Репозиторій: #link(\"{repo}\")[{esc(repo)}]; Pull Request: {pr}",
+    f"- Репозиторій: #link(\"{repo}\")[{esc(repo)}]\n- Pull Request: {pr}",
 ])
 
 # ---- джерела ------------------------------------------------------------------

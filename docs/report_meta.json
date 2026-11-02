@@ -5,6 +5,14 @@
   "teacher": "ас. Фостяк Маркіян Романович",
   "student_id": "S08",
   "repo_url": "https://github.com/TimoteyPolyanskiy/data-engineering-cityflow-S08",
-  "lab01": {"branch": "lab/01-init-profiling", "pr_url": "", "tag": "lab-01-v1"},
-  "lab02": {"branch": "lab/02-postgresql-load", "pr_url": "", "tag": "lab-02-v1"}
+  "lab01": {
+    "branch": "lab/01-init-profiling",
+    "pr_url": "https://github.com/TimoteyPolyanskiy/data-engineering-cityflow-S08/pull/1",
+    "tag": "lab-01-v1"
+  },
+  "lab02": {
+    "branch": "lab/02-postgresql-load",
+    "pr_url": "https://github.com/TimoteyPolyanskiy/data-engineering-cityflow-S08/pull/2",
+    "tag": "lab-02-v1"
+  }
 }
