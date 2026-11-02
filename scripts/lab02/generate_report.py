@@ -21,7 +21,7 @@ CURRENCIES = [r["currency"] for r in m["orders_by_currency"]]
 v = m["versions"]
 
 # ---- 1. конфігурація -----------------------------------------------------------------
-pr = link_or_hint(info["lab02"]["pr_url"], "Pull Request", "docs/report_meta.json: вкажіть lab02.pr_url, коли створите PR")
+pr = link_or_hint(info["lab02"]["pr_url"], info["lab02"]["pr_url"], "docs/report_meta.json: вкажіть lab02.pr_url, коли створите PR")
 config = "\n".join([
     bullets([
         f"Студент: {info['student']}, група {info['group']}; `student_id: {info['student_id']}`, batch `{m['batch_id']}`, останній успішний запуск `run_id = {m['run']['run_id']}`.",
@@ -29,7 +29,7 @@ config = "\n".join([
         "Пароль і параметри підключення — у `.env` поза Git (`.env.example` без секретів); повні дані й дампи в Git не потрапляють.",
         f"Гілка `{info['lab02']['branch']}`, тег `{info['lab02']['tag']}`.",
     ]),
-    f"- Репозиторій: #link(\"{info['repo_url']}\")[{esc(info['repo_url'])}]; Pull Request: {pr}",
+    f"- Репозиторій: #link(\"{info['repo_url']}\")[{esc(info['repo_url'])}]\n- Pull Request: {pr}",
 ])
 
 # ---- 2. джерела -------------------------------------------------------------------------

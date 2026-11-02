@@ -80,7 +80,8 @@
 - Python #raw("3.14.7"), драйвер #raw("psycopg 3.3.6") (libpq #raw("180006")), PostgreSQL сервер #raw("16.15"), клієнт #raw("psql (PostgreSQL) 16.15") (Docker #raw("postgres:16-alpine")), тести #raw("pytest").
 - Пароль і параметри підключення — у #raw(".env") поза Git (#raw(".env.example") без секретів)\; повні дані й дампи в Git не потрапляють.
 - Гілка #raw("lab/02-postgresql-load"), тег #raw("lab-02-v1").
-- Репозиторій: #link("https://github.com/TimoteyPolyanskiy/data-engineering-cityflow-S08")[https://github.com/TimoteyPolyanskiy/data-engineering-cityflow-S08]; Pull Request: (посилання буде додано після створення Pull Request)
+- Репозиторій: #link("https://github.com/TimoteyPolyanskiy/data-engineering-cityflow-S08")[https://github.com/TimoteyPolyanskiy/data-engineering-cityflow-S08]
+- Pull Request: #link("https://github.com/TimoteyPolyanskiy/data-engineering-cityflow-S08/pull/2")[https://github.com/TimoteyPolyanskiy/data-engineering-cityflow-S08/pull/2]
 
 = Джерела та контрольні суми
 Пакети студента #raw("S08") зберігаються в різних каталогах і не змішуються з іншими SXX\; raw-файли не змінювались. #raw("payments"), #raw("refunds"), #raw("couriers"), #raw("deliveries"), #raw("service_zones") у core не завантажуються.
