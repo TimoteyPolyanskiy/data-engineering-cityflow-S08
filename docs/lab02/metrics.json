@@ -1,0 +1,895 @@
+{
+  "batch_id": "S08-V1",
+  "versions": {
+    "python": "3.14.7",
+    "psycopg": "3.3.6",
+    "libpq": 180006,
+    "postgres_server": "16.15",
+    "psql_client": "psql (PostgreSQL) 16.15"
+  },
+  "run": {
+    "run_id": 30,
+    "started_at": "2026-11-02T01:07:16.850078+00:00",
+    "finished_at": "2026-11-02T01:07:18.620820+00:00",
+    "status": "SUCCESS"
+  },
+  "runs_total": [
+    {
+      "status": "FAILED",
+      "n": 12
+    },
+    {
+      "status": "SUCCESS",
+      "n": 18
+    }
+  ],
+  "file_stats": {
+    "customers.csv": {
+      "source_file": "customers.csv",
+      "input_count": 801,
+      "accepted_count": 800,
+      "rejected_count": 0,
+      "duplicate_count": 1
+    },
+    "merchants.csv": {
+      "source_file": "merchants.csv",
+      "input_count": 43,
+      "accepted_count": 42,
+      "rejected_count": 0,
+      "duplicate_count": 1
+    },
+    "products.csv": {
+      "source_file": "products.csv",
+      "input_count": 534,
+      "accepted_count": 531,
+      "rejected_count": 2,
+      "duplicate_count": 1
+    },
+    "orders.csv": {
+      "source_file": "orders.csv",
+      "input_count": 6001,
+      "accepted_count": 5996,
+      "rejected_count": 4,
+      "duplicate_count": 1
+    },
+    "order_items.csv": {
+      "source_file": "order_items.csv",
+      "input_count": 14062,
+      "accepted_count": 14027,
+      "rejected_count": 35,
+      "duplicate_count": 0
+    }
+  },
+  "reasons": [
+    {
+      "source_file": "customers.csv",
+      "final_status": "duplicate",
+      "reason_code": "FULL_DUPLICATE",
+      "n": 1
+    },
+    {
+      "source_file": "merchants.csv",
+      "final_status": "duplicate",
+      "reason_code": "FULL_DUPLICATE",
+      "n": 1
+    },
+    {
+      "source_file": "order_items.csv",
+      "final_status": "rejected",
+      "reason_code": "PARENT_REJECTED_ORDER",
+      "n": 8
+    },
+    {
+      "source_file": "order_items.csv",
+      "final_status": "rejected",
+      "reason_code": "PARENT_REJECTED_PRODUCT",
+      "n": 27
+    },
+    {
+      "source_file": "orders.csv",
+      "final_status": "duplicate",
+      "reason_code": "FULL_DUPLICATE",
+      "n": 1
+    },
+    {
+      "source_file": "orders.csv",
+      "final_status": "rejected",
+      "reason_code": "INVALID_CURRENCY",
+      "n": 1
+    },
+    {
+      "source_file": "orders.csv",
+      "final_status": "rejected",
+      "reason_code": "INVALID_DATE",
+      "n": 1
+    },
+    {
+      "source_file": "orders.csv",
+      "final_status": "rejected",
+      "reason_code": "ORPHAN_CUSTOMER_FK",
+      "n": 1
+    },
+    {
+      "source_file": "orders.csv",
+      "final_status": "rejected",
+      "reason_code": "ORPHAN_MERCHANT_FK",
+      "n": 1
+    },
+    {
+      "source_file": "products.csv",
+      "final_status": "duplicate",
+      "reason_code": "FULL_DUPLICATE",
+      "n": 1
+    },
+    {
+      "source_file": "products.csv",
+      "final_status": "rejected",
+      "reason_code": "INVALID_PRICE",
+      "n": 1
+    },
+    {
+      "source_file": "products.csv",
+      "final_status": "rejected",
+      "reason_code": "ORPHAN_MERCHANT_FK",
+      "n": 1
+    }
+  ],
+  "notes": [
+    {
+      "source_file": "customers.csv",
+      "code": "WHITESPACE_TRIMMED",
+      "n": 1
+    },
+    {
+      "source_file": "products.csv",
+      "code": "WHITESPACE_TRIMMED",
+      "n": 1
+    }
+  ],
+  "rejected_examples": [
+    {
+      "source_file": "orders.csv",
+      "business_key": "S08-O0002449",
+      "reason_code": "INVALID_CURRENCY"
+    },
+    {
+      "source_file": "orders.csv",
+      "business_key": "S08-O0003385",
+      "reason_code": "INVALID_DATE"
+    },
+    {
+      "source_file": "orders.csv",
+      "business_key": "S08-O0004825",
+      "reason_code": "ORPHAN_CUSTOMER_FK"
+    },
+    {
+      "source_file": "orders.csv",
+      "business_key": "S08-O0005136",
+      "reason_code": "ORPHAN_MERCHANT_FK"
+    },
+    {
+      "source_file": "products.csv",
+      "business_key": "S08-P000074",
+      "reason_code": "INVALID_PRICE"
+    },
+    {
+      "source_file": "products.csv",
+      "business_key": "S08-P000331",
+      "reason_code": "ORPHAN_MERCHANT_FK"
+    }
+  ],
+  "sources": [
+    {
+      "source_file": "customers.csv",
+      "sha256": "51273484b70350ac299e5edeee45b4bcf68e727d141ddc4481a861974100551b",
+      "row_count": 801
+    },
+    {
+      "source_file": "merchants.csv",
+      "sha256": "2d3c403f6b59446645c83dd0c4d3b3b355c7e55cd95739d8d688ba49db26cf5c",
+      "row_count": 43
+    },
+    {
+      "source_file": "order_items.csv",
+      "sha256": "abef5cefc583391e7ca10d4d5824dd3e83554361b70cb5f551e6f548c57feec8",
+      "row_count": 14062
+    },
+    {
+      "source_file": "orders.csv",
+      "sha256": "42547e7641607e97b4e24f141d80a72f48f6f15d4a90917f46d3b88bc5980a77",
+      "row_count": 6001
+    },
+    {
+      "source_file": "products.csv",
+      "sha256": "7ea189b9c7beb7e89b404f536ec45fc722b98bd271b1e75df03b933b50ea1618",
+      "row_count": 534
+    }
+  ],
+  "reconciliation": [
+    {
+      "check_name": "rows_input_vs_decisions",
+      "scope": "customers.csv",
+      "staging_value": "801",
+      "core_value": "801",
+      "ok": true
+    },
+    {
+      "check_name": "rows_accepted_vs_core",
+      "scope": "customers.csv",
+      "staging_value": "800",
+      "core_value": "800",
+      "ok": true
+    },
+    {
+      "check_name": "key_set_difference",
+      "scope": "customers.csv",
+      "staging_value": "0",
+      "core_value": "0",
+      "ok": true
+    },
+    {
+      "check_name": "rows_input_vs_decisions",
+      "scope": "merchants.csv",
+      "staging_value": "43",
+      "core_value": "43",
+      "ok": true
+    },
+    {
+      "check_name": "rows_accepted_vs_core",
+      "scope": "merchants.csv",
+      "staging_value": "42",
+      "core_value": "42",
+      "ok": true
+    },
+    {
+      "check_name": "key_set_difference",
+      "scope": "merchants.csv",
+      "staging_value": "0",
+      "core_value": "0",
+      "ok": true
+    },
+    {
+      "check_name": "rows_input_vs_decisions",
+      "scope": "products.csv",
+      "staging_value": "534",
+      "core_value": "534",
+      "ok": true
+    },
+    {
+      "check_name": "rows_accepted_vs_core",
+      "scope": "products.csv",
+      "staging_value": "531",
+      "core_value": "531",
+      "ok": true
+    },
+    {
+      "check_name": "key_set_difference",
+      "scope": "products.csv",
+      "staging_value": "0",
+      "core_value": "0",
+      "ok": true
+    },
+    {
+      "check_name": "rows_input_vs_decisions",
+      "scope": "orders.csv",
+      "staging_value": "6001",
+      "core_value": "6001",
+      "ok": true
+    },
+    {
+      "check_name": "rows_accepted_vs_core",
+      "scope": "orders.csv",
+      "staging_value": "5996",
+      "core_value": "5996",
+      "ok": true
+    },
+    {
+      "check_name": "key_set_difference",
+      "scope": "orders.csv",
+      "staging_value": "0",
+      "core_value": "0",
+      "ok": true
+    },
+    {
+      "check_name": "rows_input_vs_decisions",
+      "scope": "order_items.csv",
+      "staging_value": "14062",
+      "core_value": "14062",
+      "ok": true
+    },
+    {
+      "check_name": "rows_accepted_vs_core",
+      "scope": "order_items.csv",
+      "staging_value": "14027",
+      "core_value": "14027",
+      "ok": true
+    },
+    {
+      "check_name": "key_set_difference",
+      "scope": "order_items.csv",
+      "staging_value": "0",
+      "core_value": "0",
+      "ok": true
+    },
+    {
+      "check_name": "orders_orders_count_by_currency",
+      "scope": "EUR",
+      "staging_value": "32",
+      "core_value": "32",
+      "ok": true
+    },
+    {
+      "check_name": "orders_subtotal_by_currency",
+      "scope": "EUR",
+      "staging_value": "319.73",
+      "core_value": "319.73",
+      "ok": true
+    },
+    {
+      "check_name": "orders_delivery_fee_by_currency",
+      "scope": "EUR",
+      "staging_value": "48.74",
+      "core_value": "48.74",
+      "ok": true
+    },
+    {
+      "check_name": "orders_discount_by_currency",
+      "scope": "EUR",
+      "staging_value": "14.32",
+      "core_value": "14.32",
+      "ok": true
+    },
+    {
+      "check_name": "orders_total_amount_by_currency",
+      "scope": "EUR",
+      "staging_value": "354.17",
+      "core_value": "354.17",
+      "ok": true
+    },
+    {
+      "check_name": "orders_orders_count_by_currency",
+      "scope": "UAH",
+      "staging_value": "5924",
+      "core_value": "5924",
+      "ok": true
+    },
+    {
+      "check_name": "orders_subtotal_by_currency",
+      "scope": "UAH",
+      "staging_value": "3284987.20",
+      "core_value": "3284987.20",
+      "ok": true
+    },
+    {
+      "check_name": "orders_delivery_fee_by_currency",
+      "scope": "UAH",
+      "staging_value": "437319.60",
+      "core_value": "437319.60",
+      "ok": true
+    },
+    {
+      "check_name": "orders_discount_by_currency",
+      "scope": "UAH",
+      "staging_value": "103072.10",
+      "core_value": "103072.10",
+      "ok": true
+    },
+    {
+      "check_name": "orders_total_amount_by_currency",
+      "scope": "UAH",
+      "staging_value": "3619371.87",
+      "core_value": "3619371.87",
+      "ok": true
+    },
+    {
+      "check_name": "orders_orders_count_by_currency",
+      "scope": "USD",
+      "staging_value": "40",
+      "core_value": "40",
+      "ok": true
+    },
+    {
+      "check_name": "orders_subtotal_by_currency",
+      "scope": "USD",
+      "staging_value": "522.46",
+      "core_value": "522.46",
+      "ok": true
+    },
+    {
+      "check_name": "orders_delivery_fee_by_currency",
+      "scope": "USD",
+      "staging_value": "63.65",
+      "core_value": "63.65",
+      "ok": true
+    },
+    {
+      "check_name": "orders_discount_by_currency",
+      "scope": "USD",
+      "staging_value": "11.01",
+      "core_value": "11.01",
+      "ok": true
+    },
+    {
+      "check_name": "orders_total_amount_by_currency",
+      "scope": "USD",
+      "staging_value": "575.10",
+      "core_value": "575.10",
+      "ok": true
+    },
+    {
+      "check_name": "order_items_items_count_by_currency",
+      "scope": "EUR",
+      "staging_value": "71",
+      "core_value": "71",
+      "ok": true
+    },
+    {
+      "check_name": "order_items_quantity_by_currency",
+      "scope": "EUR",
+      "staging_value": "89",
+      "core_value": "89",
+      "ok": true
+    },
+    {
+      "check_name": "order_items_line_total_by_currency",
+      "scope": "EUR",
+      "staging_value": "305.42",
+      "core_value": "305.42",
+      "ok": true
+    },
+    {
+      "check_name": "order_items_items_count_by_currency",
+      "scope": "UAH",
+      "staging_value": "13869",
+      "core_value": "13869",
+      "ok": true
+    },
+    {
+      "check_name": "order_items_quantity_by_currency",
+      "scope": "UAH",
+      "staging_value": "17056",
+      "core_value": "17056",
+      "ok": true
+    },
+    {
+      "check_name": "order_items_line_total_by_currency",
+      "scope": "UAH",
+      "staging_value": "3179134.01",
+      "core_value": "3179134.01",
+      "ok": true
+    },
+    {
+      "check_name": "order_items_items_count_by_currency",
+      "scope": "USD",
+      "staging_value": "87",
+      "core_value": "87",
+      "ok": true
+    },
+    {
+      "check_name": "order_items_quantity_by_currency",
+      "scope": "USD",
+      "staging_value": "103",
+      "core_value": "103",
+      "ok": true
+    },
+    {
+      "check_name": "order_items_line_total_by_currency",
+      "scope": "USD",
+      "staging_value": "511.46",
+      "core_value": "511.46",
+      "ok": true
+    },
+    {
+      "check_name": "missing_fk",
+      "scope": "orders->customers",
+      "staging_value": "0",
+      "core_value": "0",
+      "ok": true
+    },
+    {
+      "check_name": "missing_fk",
+      "scope": "orders->merchants",
+      "staging_value": "0",
+      "core_value": "0",
+      "ok": true
+    },
+    {
+      "check_name": "missing_fk",
+      "scope": "products->merchants",
+      "staging_value": "0",
+      "core_value": "0",
+      "ok": true
+    },
+    {
+      "check_name": "missing_fk",
+      "scope": "order_items->orders",
+      "staging_value": "0",
+      "core_value": "0",
+      "ok": true
+    },
+    {
+      "check_name": "missing_fk",
+      "scope": "order_items->products",
+      "staging_value": "0",
+      "core_value": "0",
+      "ok": true
+    }
+  ],
+  "pk_duplicates": {
+    "customers": 0,
+    "merchants": 0,
+    "products": 0,
+    "orders": 0,
+    "order_items": 0
+  },
+  "missing_fk": {
+    "orders → customers": 0,
+    "orders → merchants": 0,
+    "products → merchants": 0,
+    "order_items → orders": 0,
+    "order_items → products": 0
+  },
+  "orders_by_currency": [
+    {
+      "currency": "EUR",
+      "orders": 32,
+      "subtotal": "319.73",
+      "delivery_fee": "48.74",
+      "discount": "14.32",
+      "total": "354.17"
+    },
+    {
+      "currency": "UAH",
+      "orders": 5924,
+      "subtotal": "3284987.20",
+      "delivery_fee": "437319.60",
+      "discount": "103072.10",
+      "total": "3619371.87"
+    },
+    {
+      "currency": "USD",
+      "orders": 40,
+      "subtotal": "522.46",
+      "delivery_fee": "63.65",
+      "discount": "11.01",
+      "total": "575.10"
+    }
+  ],
+  "items_by_currency": [
+    {
+      "currency": "EUR",
+      "items": 71,
+      "quantity": 89,
+      "line_total": "305.42"
+    },
+    {
+      "currency": "UAH",
+      "items": 13869,
+      "quantity": 17056,
+      "line_total": "3179134.01"
+    },
+    {
+      "currency": "USD",
+      "items": 87,
+      "quantity": 103,
+      "line_total": "511.46"
+    }
+  ],
+  "fanout": [
+    {
+      "currency": "EUR",
+      "order_rows": 32,
+      "joined_rows": 71,
+      "true_sum": "354.17",
+      "inflated_sum": "956.78",
+      "orders_with_items": 32,
+      "orders_total": "354.17",
+      "items_total": "305.42"
+    },
+    {
+      "currency": "UAH",
+      "order_rows": 5924,
+      "joined_rows": 13869,
+      "true_sum": "3619371.87",
+      "inflated_sum": "10273021.62",
+      "orders_with_items": 5922,
+      "orders_total": "3618934.66",
+      "items_total": "3179134.01"
+    },
+    {
+      "currency": "USD",
+      "order_rows": 40,
+      "joined_rows": 87,
+      "true_sum": "575.10",
+      "inflated_sum": "1611.21",
+      "orders_with_items": 40,
+      "orders_total": "575.10",
+      "items_total": "511.46"
+    }
+  ],
+  "formula_total": [
+    {
+      "order_id": "S08-O0001712",
+      "currency": "UAH",
+      "subtotal_amount": "494.15",
+      "delivery_fee": "80.73",
+      "discount_amount": "0.00",
+      "total_amount": "712.05",
+      "difference": "-137.17"
+    }
+  ],
+  "items_vs_orders": {
+    "orders": 5994,
+    "subtotal_ne_sum_line_total": 1813,
+    "subtotal_ne_sum_line_total_plus_discount": 25,
+    "discount_ne_sum_line_discount": 8
+  },
+  "sum_breakdown": [
+    {
+      "currency": "EUR",
+      "orders": 32,
+      "subtotal": "319.73",
+      "delivery_fee": "48.74",
+      "discount": "14.32",
+      "total": "354.17",
+      "line_total": "305.42",
+      "line_discount": "14.29"
+    },
+    {
+      "currency": "UAH",
+      "orders": 5922,
+      "subtotal": "3284693.81",
+      "delivery_fee": "437154.29",
+      "discount": "103050.61",
+      "total": "3618934.66",
+      "line_total": "3179134.01",
+      "line_discount": "102919.39"
+    },
+    {
+      "currency": "USD",
+      "orders": 40,
+      "subtotal": "522.46",
+      "delivery_fee": "63.65",
+      "discount": "11.01",
+      "total": "575.10",
+      "line_total": "511.46",
+      "line_discount": "11.00"
+    }
+  ],
+  "orders_without_items": [
+    {
+      "order_id": "S08-O0000842",
+      "currency": "UAH",
+      "item_reasons": "PARENT_REJECTED_PRODUCT",
+      "products": "S08-P000331"
+    },
+    {
+      "order_id": "S08-O0001142",
+      "currency": "UAH",
+      "item_reasons": "PARENT_REJECTED_PRODUCT",
+      "products": "S08-P000074"
+    }
+  ],
+  "parent_rejected": [
+    {
+      "reason_code": "PARENT_REJECTED_ORDER",
+      "parent_file": "orders.csv",
+      "parent_key": "S08-O0002449",
+      "parent_reason": "INVALID_CURRENCY",
+      "items": 2
+    },
+    {
+      "reason_code": "PARENT_REJECTED_ORDER",
+      "parent_file": "orders.csv",
+      "parent_key": "S08-O0003385",
+      "parent_reason": "INVALID_DATE",
+      "items": 1
+    },
+    {
+      "reason_code": "PARENT_REJECTED_ORDER",
+      "parent_file": "orders.csv",
+      "parent_key": "S08-O0004825",
+      "parent_reason": "ORPHAN_CUSTOMER_FK",
+      "items": 1
+    },
+    {
+      "reason_code": "PARENT_REJECTED_ORDER",
+      "parent_file": "orders.csv",
+      "parent_key": "S08-O0005136",
+      "parent_reason": "ORPHAN_MERCHANT_FK",
+      "items": 4
+    },
+    {
+      "reason_code": "PARENT_REJECTED_PRODUCT",
+      "parent_file": "products.csv",
+      "parent_key": "S08-P000074",
+      "parent_reason": "INVALID_PRICE",
+      "items": 23
+    },
+    {
+      "reason_code": "PARENT_REJECTED_PRODUCT",
+      "parent_file": "products.csv",
+      "parent_key": "S08-P000331",
+      "parent_reason": "ORPHAN_MERCHANT_FK",
+      "items": 4
+    }
+  ],
+  "evidence": {
+    "idempotency": {
+      "run_1": 22,
+      "run_2": 23,
+      "state_equal": true,
+      "state_run_1": {
+        "counts": {
+          "customers": 800,
+          "merchants": 42,
+          "products": 531,
+          "orders": 5996,
+          "order_items": 14027
+        },
+        "key_md5": {
+          "customers": "da4d55524d104afccbaa2be75778f687",
+          "merchants": "7cc35a5d848f8a52fa50fbf11f6a444b",
+          "products": "6b620b826d65d57c2ee619cc49ed4b96",
+          "orders": "6390824fa5c278e03c6d53c53b9f2784",
+          "order_items": "dd5d65c8edd4d928e8e0fa51f62b398e"
+        },
+        "orders_by_currency": {
+          "EUR": {
+            "orders": 32,
+            "total_amount": "354.17"
+          },
+          "UAH": {
+            "orders": 5924,
+            "total_amount": "3619371.87"
+          },
+          "USD": {
+            "orders": 40,
+            "total_amount": "575.10"
+          }
+        },
+        "items_by_currency": {
+          "EUR": {
+            "items": 71,
+            "line_total": "305.42"
+          },
+          "UAH": {
+            "items": 13869,
+            "line_total": "3179134.01"
+          },
+          "USD": {
+            "items": 87,
+            "line_total": "511.46"
+          }
+        }
+      },
+      "state_run_2": {
+        "counts": {
+          "customers": 800,
+          "merchants": 42,
+          "products": 531,
+          "orders": 5996,
+          "order_items": 14027
+        },
+        "key_md5": {
+          "customers": "da4d55524d104afccbaa2be75778f687",
+          "merchants": "7cc35a5d848f8a52fa50fbf11f6a444b",
+          "products": "6b620b826d65d57c2ee619cc49ed4b96",
+          "orders": "6390824fa5c278e03c6d53c53b9f2784",
+          "order_items": "dd5d65c8edd4d928e8e0fa51f62b398e"
+        },
+        "orders_by_currency": {
+          "EUR": {
+            "orders": 32,
+            "total_amount": "354.17"
+          },
+          "UAH": {
+            "orders": 5924,
+            "total_amount": "3619371.87"
+          },
+          "USD": {
+            "orders": 40,
+            "total_amount": "575.10"
+          }
+        },
+        "items_by_currency": {
+          "EUR": {
+            "items": 71,
+            "line_total": "305.42"
+          },
+          "UAH": {
+            "items": 13869,
+            "line_total": "3179134.01"
+          },
+          "USD": {
+            "items": 87,
+            "line_total": "511.46"
+          }
+        }
+      },
+      "decisions_equal": true
+    },
+    "rollback": {
+      "injected": "INSERT у core.order_items з quantity = -1 після TRUNCATE та вставки нових рядків",
+      "failed_run_id": 24,
+      "failed_status": "FAILED",
+      "error_message": "CheckViolation: new row for relation \"order_items\" violates check constraint \"order_items_quantity_check\"\nDETAIL:  Failing row contains (TEST-NEG-QTY, S08-O0000001, S08-P000373, -1, 1.00, 0.00, 1.00, UAH).",
+      "state_before": {
+        "customers": 800,
+        "merchants": 42,
+        "products": 531,
+        "orders": 5996,
+        "order_items": 14027
+      },
+      "state_after": {
+        "customers": 800,
+        "merchants": 42,
+        "products": 531,
+        "orders": 5996,
+        "order_items": 14027
+      },
+      "state_equal": true,
+      "recovery_run_id": 25
+    },
+    "wrong_header": {
+      "run_id": 26,
+      "status": "FAILED",
+      "error_message": "ValueError: Порушення схеми CSV у customers.csv. Очікувалось: ['customer_id', 'full_name', 'email', 'phone', 'city', 'service_zone_id', 'registered_at', 'customer_status'], отримано: ['invalid_col1', ",
+      "core_unchanged": true
+    },
+    "missing_file": {
+      "run_id": 27,
+      "status": "FAILED",
+      "error_message": "FileNotFoundError: Обов'язковий файл /tmp/pytest-of-tim/pytest-34/test_missing_required_file_sto0/orders.csv відсутній.",
+      "core_unchanged": true
+    },
+    "changed_batch_content": {
+      "run_id": 29,
+      "status": "FAILED",
+      "error_message": "ValueError: Вміст orders.csv змінився під тим самим batch_id=S08-V1: було 42547e764160…, стало ffd3a3800e9f…. Використайте новий batch_id.",
+      "core_unchanged": true
+    }
+  },
+  "archives": {
+    "archives": {
+      "cityflow_S08_base_v1.zip": {
+        "sha256": "8a8eb3777248c41e1ffc424ca055ecde9ece81efe5a5e93e4d464bede4b661ac",
+        "teacher_sha256": "8a8eb3777248c41e1ffc424ca055ecde9ece81efe5a5e93e4d464bede4b661ac",
+        "matches_teacher": true
+      },
+      "cityflow_S08_lab02_relational_v1.zip": {
+        "sha256": "a6f77a3ad9dcffb14a45440406be571b74051f14ed11d2372e62cdfac046a762",
+        "teacher_sha256": null,
+        "matches_teacher": null
+      }
+    },
+    "packages": {
+      "cityflow_S08_base_v1.zip": {
+        "package_id": "S08-LAB01-BASE-V1",
+        "student_id": "S08",
+        "directory": "data/raw/base_v1",
+        "files": {
+          "README.txt": "ae5b0de5a37815e6bab84aebeeab0af89daf89e6cd825328a7cb45a5e6102674",
+          "customers.csv": "51273484b70350ac299e5edeee45b4bcf68e727d141ddc4481a861974100551b",
+          "merchants.csv": "2d3c403f6b59446645c83dd0c4d3b3b355c7e55cd95739d8d688ba49db26cf5c",
+          "orders.csv": "42547e7641607e97b4e24f141d80a72f48f6f15d4a90917f46d3b88bc5980a77",
+          "products.csv": "7ea189b9c7beb7e89b404f536ec45fc722b98bd271b1e75df03b933b50ea1618"
+        }
+      },
+      "cityflow_S08_lab02_relational_v1.zip": {
+        "package_id": "S08-LAB02-RELATIONAL-V1",
+        "student_id": "S08",
+        "directory": "data/raw/lab02_relational",
+        "files": {
+          "README.txt": "0fab2bb3c7ea004604f17e3b60a2c0ca2c202f7124ff6aa07dda4c6a2a40b237",
+          "couriers.csv": "14864490b7aa7a0d72fbfef134bd7935c5f16f1a7fe620fab760e8c7c1991bc7",
+          "deliveries.csv": "0d5c3e63ded4292b297cc849d12bebd048d7caad788d3a572ccf048afdc9069a",
+          "order_items.csv": "abef5cefc583391e7ca10d4d5824dd3e83554361b70cb5f551e6f548c57feec8",
+          "payments.csv": "72db5257c8fb164d173f56db5db4ee7f23ded4e2bedc2578035a8a45f8088474",
+          "refunds.csv": "07293287091a1483a233376b459a5f65284ff3807d5f9c9eb85e753eceb09e39",
+          "service_zones.csv": "fef492df287e794d2630a5711f1aa0440c78aca3f2abfb1d202115cefaa74bd6"
+        }
+      }
+    }
+  }
+}
