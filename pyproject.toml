@@ -1,0 +1,33 @@
+[project]
+name = "data-engineering"
+version = "0.1.0"
+description = "CityFlow data engineering labs (student S08)"
+readme = "README.md"
+authors = [
+    { name = "Tim", email = "Tymotei.Polianskyi@lnu.edu.ua" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "ipykernel>=7.3.0",
+    "jupyterlab>=4.6.3",
+    "matplotlib>=3.11.2",
+    "pandas>=3.0.6",
+    "psycopg[binary]>=3.1.18",
+    "python-dotenv>=1.0.1",
+]
+
+[project.scripts]
+data-engineering = "data_engineering:main"
+
+[build-system]
+requires = ["uv_build>=0.12.10,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "jupytext>=1.19.5",
+    "pytest>=9.1.1",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
