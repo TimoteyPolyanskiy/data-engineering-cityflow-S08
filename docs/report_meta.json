@@ -1,0 +1,10 @@
+{
+  "student": "Полянський Тимотей",
+  "group": "ФЕП-34",
+  "course_year": "3 курсу",
+  "teacher": "ас. Фостяк Маркіян Романович",
+  "student_id": "S08",
+  "repo_url": "https://github.com/TimoteyPolyanskiy/data-engineering-cityflow-S08",
+  "lab01": {"branch": "lab/01-init-profiling", "pr_url": "", "tag": "lab-01-v1"},
+  "lab02": {"branch": "lab/02-postgresql-load", "pr_url": "", "tag": "lab-02-v1"}
+}
