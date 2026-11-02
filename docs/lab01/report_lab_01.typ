@@ -83,7 +83,8 @@
 - Середовище: Omarchy (Arch Linux, Wayland), fish, Neovim, tmux\; контроль версій — git, lazygit, gh.
 - Python #raw("3.14.7"), менеджер #raw("uv"), pandas #raw("3.0.6"), matplotlib, jupytext (залежності зафіксовано в #raw("pyproject.toml") і #raw("uv.lock")).
 - Гілка #raw("lab/01-init-profiling"), тег #raw("lab-01-v1").
-- Репозиторій: #link("https://github.com/TimoteyPolyanskiy/data-engineering-cityflow-S08")[https://github.com/TimoteyPolyanskiy/data-engineering-cityflow-S08]; Pull Request: (посилання буде додано після створення Pull Request)
+- Репозиторій: #link("https://github.com/TimoteyPolyanskiy/data-engineering-cityflow-S08")[https://github.com/TimoteyPolyanskiy/data-engineering-cityflow-S08]
+- Pull Request: #link("https://github.com/TimoteyPolyanskiy/data-engineering-cityflow-S08/pull/1")[https://github.com/TimoteyPolyanskiy/data-engineering-cityflow-S08/pull/1]
 
 = Джерела даних, рівень деталізації та ключі
 Досліджено чотири файли пакета. Унікальність ключів і зв'язки нижче *перевірено* на даних.
@@ -160,7 +161,7 @@
 
 #align(center)[
   #figure(
-    image("orders_by_status.png", width: 66%),
+    image("orders_by_status.png", width: 77%),
     caption: [Кількість записів про замовлення за статусами]
   )
 ]
