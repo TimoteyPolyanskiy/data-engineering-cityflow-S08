@@ -1,0 +1,42 @@
+{
+  "archives": {
+    "cityflow_S08_base_v1.zip": {
+      "sha256": "8a8eb3777248c41e1ffc424ca055ecde9ece81efe5a5e93e4d464bede4b661ac",
+      "teacher_sha256": "8a8eb3777248c41e1ffc424ca055ecde9ece81efe5a5e93e4d464bede4b661ac",
+      "matches_teacher": true
+    },
+    "cityflow_S08_lab02_relational_v1.zip": {
+      "sha256": "a6f77a3ad9dcffb14a45440406be571b74051f14ed11d2372e62cdfac046a762",
+      "teacher_sha256": null,
+      "matches_teacher": null
+    }
+  },
+  "packages": {
+    "cityflow_S08_base_v1.zip": {
+      "package_id": "S08-LAB01-BASE-V1",
+      "student_id": "S08",
+      "directory": "data/raw/base_v1",
+      "files": {
+        "README.txt": "ae5b0de5a37815e6bab84aebeeab0af89daf89e6cd825328a7cb45a5e6102674",
+        "customers.csv": "51273484b70350ac299e5edeee45b4bcf68e727d141ddc4481a861974100551b",
+        "merchants.csv": "2d3c403f6b59446645c83dd0c4d3b3b355c7e55cd95739d8d688ba49db26cf5c",
+        "orders.csv": "42547e7641607e97b4e24f141d80a72f48f6f15d4a90917f46d3b88bc5980a77",
+        "products.csv": "7ea189b9c7beb7e89b404f536ec45fc722b98bd271b1e75df03b933b50ea1618"
+      }
+    },
+    "cityflow_S08_lab02_relational_v1.zip": {
+      "package_id": "S08-LAB02-RELATIONAL-V1",
+      "student_id": "S08",
+      "directory": "data/raw/lab02_relational",
+      "files": {
+        "README.txt": "0fab2bb3c7ea004604f17e3b60a2c0ca2c202f7124ff6aa07dda4c6a2a40b237",
+        "couriers.csv": "14864490b7aa7a0d72fbfef134bd7935c5f16f1a7fe620fab760e8c7c1991bc7",
+        "deliveries.csv": "0d5c3e63ded4292b297cc849d12bebd048d7caad788d3a572ccf048afdc9069a",
+        "order_items.csv": "abef5cefc583391e7ca10d4d5824dd3e83554361b70cb5f551e6f548c57feec8",
+        "payments.csv": "72db5257c8fb164d173f56db5db4ee7f23ded4e2bedc2578035a8a45f8088474",
+        "refunds.csv": "07293287091a1483a233376b459a5f65284ff3807d5f9c9eb85e753eceb09e39",
+        "service_zones.csv": "fef492df287e794d2630a5711f1aa0440c78aca3f2abfb1d202115cefaa74bd6"
+      }
+    }
+  }
+}

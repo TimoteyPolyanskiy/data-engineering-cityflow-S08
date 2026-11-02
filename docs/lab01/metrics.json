@@ -1,0 +1,451 @@
+{
+  "student_id": "S08",
+  "package_id": "S08-LAB01-BASE-V1",
+  "python": "3.14.7",
+  "pandas": "3.0.6",
+  "archives": {
+    "cityflow_S08_base_v1.zip": {
+      "sha256": "8a8eb3777248c41e1ffc424ca055ecde9ece81efe5a5e93e4d464bede4b661ac",
+      "teacher_sha256": "8a8eb3777248c41e1ffc424ca055ecde9ece81efe5a5e93e4d464bede4b661ac",
+      "matches_teacher": true
+    },
+    "cityflow_S08_lab02_relational_v1.zip": {
+      "sha256": "a6f77a3ad9dcffb14a45440406be571b74051f14ed11d2372e62cdfac046a762",
+      "teacher_sha256": null,
+      "matches_teacher": null
+    }
+  },
+  "summary": [
+    {
+      "file": "customers.csv",
+      "rows": 801,
+      "columns": 8,
+      "unique_ids": 800,
+      "full_duplicates": 1,
+      "missing_cells": 5,
+      "date_column": "registered_at",
+      "date_min": "2024-03-10 04:22:08.504394413+00:00",
+      "date_max": "2026-08-29 07:06:33.137727612+00:00",
+      "invalid_dates": 0
+    },
+    {
+      "file": "merchants.csv",
+      "rows": 43,
+      "columns": 7,
+      "unique_ids": 42,
+      "full_duplicates": 1,
+      "missing_cells": 0,
+      "date_column": "opened_at",
+      "date_min": "2019-09-07 11:46:11.601515588+00:00",
+      "date_max": "2025-07-19 12:35:09.191823059+00:00",
+      "invalid_dates": 0
+    },
+    {
+      "file": "products.csv",
+      "rows": 534,
+      "columns": 7,
+      "unique_ids": 533,
+      "full_duplicates": 1,
+      "missing_cells": 0,
+      "date_column": "updated_at",
+      "date_min": "2025-08-02 03:02:23.285140724+00:00",
+      "date_max": "2026-08-30 23:59:20.250998490+00:00",
+      "invalid_dates": 0
+    },
+    {
+      "file": "orders.csv",
+      "rows": 6001,
+      "columns": 10,
+      "unique_ids": 6000,
+      "full_duplicates": 1,
+      "missing_cells": 0,
+      "date_column": "created_at",
+      "date_min": "2025-09-01 11:47:50+00:00",
+      "date_max": "2026-08-31 20:31:25+00:00",
+      "invalid_dates": 2
+    }
+  ],
+  "statuses": {
+    "delivered": 4966,
+    "cancelled": 449,
+    "partially_refunded": 223,
+    "refunded": 198,
+    "failed": 162,
+    "in_progress": 3
+  },
+  "currencies": {
+    "UAH": 5928,
+    "USD": 40,
+    "EUR": 32,
+    "UA H": 1
+  },
+  "daily": {
+    "days": 365,
+    "min": 6,
+    "max": 32,
+    "median": 16.0,
+    "mean": 16.4,
+    "min_day": "2026-01-15",
+    "max_day": "2025-11-28",
+    "excluded_non_iso": 2,
+    "kyiv_min": 5,
+    "kyiv_max": 32,
+    "high_month": "2025-11",
+    "high_month_mean": 21.3,
+    "low_month": "2026-01",
+    "low_month_mean": 12.8
+  },
+  "dups": {
+    "customers": {
+      "full_duplicate_rows": 1,
+      "key_repeat_rows": 1,
+      "key_conflicts": 0,
+      "ids": [
+        "S08-C000504"
+      ]
+    },
+    "merchants": {
+      "full_duplicate_rows": 1,
+      "key_repeat_rows": 1,
+      "key_conflicts": 0,
+      "ids": [
+        "S08-M00009"
+      ]
+    },
+    "products": {
+      "full_duplicate_rows": 1,
+      "key_repeat_rows": 1,
+      "key_conflicts": 0,
+      "ids": [
+        "S08-P000219"
+      ]
+    },
+    "orders": {
+      "full_duplicate_rows": 1,
+      "key_repeat_rows": 1,
+      "key_conflicts": 0,
+      "ids": [
+        "S08-O0000683"
+      ]
+    }
+  },
+  "missing_phone": [
+    "S08-C000179",
+    "S08-C000180",
+    "S08-C000254",
+    "S08-C000297",
+    "S08-C000508"
+  ],
+  "zero_price": [
+    {
+      "product_id": "S08-P000074",
+      "merchant_id": "S08-M00006",
+      "product_name": "Antiseptic",
+      "category": "health",
+      "unit_price_uah": "0.0",
+      "is_active": "True",
+      "updated_at": "2026-08-09T04:27:35.239409173Z"
+    }
+  ],
+  "formula_bad": [
+    {
+      "order_id": "S08-O0001712",
+      "currency": "UAH",
+      "subtotal_amount": "494.15",
+      "delivery_fee": "80.73",
+      "discount_amount": "0.0",
+      "total_amount": "712.05",
+      "difference": "-137.17"
+    }
+  ],
+  "date_info": {
+    "customers": {
+      "column": "registered_at",
+      "min": "2024-03-10 04:22:08.504394413+00:00",
+      "max": "2026-08-29 07:06:33.137727612+00:00",
+      "missing": 0,
+      "invalid": 0,
+      "invalid_rows": []
+    },
+    "merchants": {
+      "column": "opened_at",
+      "min": "2019-09-07 11:46:11.601515588+00:00",
+      "max": "2025-07-19 12:35:09.191823059+00:00",
+      "missing": 0,
+      "invalid": 0,
+      "invalid_rows": []
+    },
+    "products": {
+      "column": "updated_at",
+      "min": "2025-08-02 03:02:23.285140724+00:00",
+      "max": "2026-08-30 23:59:20.250998490+00:00",
+      "missing": 0,
+      "invalid": 0,
+      "invalid_rows": []
+    },
+    "orders": {
+      "column": "created_at",
+      "min": "2025-09-01 11:47:50+00:00",
+      "max": "2026-08-31 20:31:25+00:00",
+      "missing": 0,
+      "invalid": 2,
+      "invalid_rows": [
+        {
+          "id": "S08-O0000044",
+          "value": "04/09/2025 11:32"
+        },
+        {
+          "id": "S08-O0003385",
+          "value": "2026-19-45 25:61:00"
+        }
+      ]
+    }
+  },
+  "missing": [
+    {
+      "file": "customers.csv",
+      "column": "phone",
+      "nan": 5,
+      "empty_field": 5,
+      "whitespace_only": 0,
+      "edge_whitespace": 0
+    },
+    {
+      "file": "customers.csv",
+      "column": "city",
+      "nan": 0,
+      "empty_field": 0,
+      "whitespace_only": 0,
+      "edge_whitespace": 1
+    },
+    {
+      "file": "products.csv",
+      "column": "category",
+      "nan": 0,
+      "empty_field": 0,
+      "whitespace_only": 0,
+      "edge_whitespace": 1
+    }
+  ],
+  "numeric": {
+    "products.unit_price_uah": {
+      "min": 0.0,
+      "max": 760.46,
+      "zero": 1,
+      "negative": 0
+    },
+    "orders.subtotal_amount": {
+      "min": 1.4,
+      "max": 3033.61,
+      "zero": 0,
+      "negative": 0
+    },
+    "orders.delivery_fee": {
+      "min": 0.0,
+      "max": 148.88,
+      "zero": 614,
+      "negative": 0
+    },
+    "orders.discount_amount": {
+      "min": 0.0,
+      "max": 350.0,
+      "zero": 4203,
+      "negative": 0
+    },
+    "orders.total_amount": {
+      "min": 3.26,
+      "max": 3102.01,
+      "zero": 0,
+      "negative": 0
+    }
+  },
+  "orphans": {
+    "orders.customer_id": [
+      "S08-O0004825"
+    ],
+    "orders.merchant_id": [
+      "S08-O0005136"
+    ],
+    "products.merchant_id": [
+      "S08-P000331"
+    ]
+  },
+  "findings": [
+    {
+      "file": "усі 4 CSV",
+      "field": "ключ рядка",
+      "kind": "підтверджене порушення",
+      "problem": "повні дублікати рядків",
+      "count": 4,
+      "ids": [
+        "S08-C000504",
+        "S08-M00009",
+        "S08-P000219",
+        "S08-O0000683"
+      ],
+      "impact": "подвоєння записів; порушення PK у реляційній базі",
+      "action": "залишити одну точну копію, решту позначити як duplicate (Лаба 2)",
+      "targets": [
+        "customers",
+        "merchants",
+        "products",
+        "orders"
+      ]
+    },
+    {
+      "file": "customers.csv",
+      "field": "phone",
+      "kind": "потенційний ризик",
+      "problem": "порожнє поле телефону",
+      "count": 5,
+      "ids": [
+        "S08-C000179",
+        "S08-C000180",
+        "S08-C000254",
+        "S08-C000297",
+        "S08-C000508"
+      ],
+      "impact": "немає контакту для зв'язку; чи є телефон обов'язковим — припущення, джерело цього не каже",
+      "action": "прийняти як допустимий пропуск, не підставляти 0 чи сурогат",
+      "targets": [
+        "customers"
+      ]
+    },
+    {
+      "file": "customers.csv",
+      "field": "city",
+      "kind": "підтверджене порушення",
+      "problem": "пробіли на початку/в кінці значення",
+      "count": 1,
+      "ids": [
+        "S08-C000727"
+      ],
+      "impact": "окремі написання однієї категорії (' Lviv ' ≠ 'Lviv') ламають групування та порівняння",
+      "action": "обрізати пробіли за явним правилом нормалізації, оригінал зберегти",
+      "targets": [
+        "customers"
+      ]
+    },
+    {
+      "file": "products.csv",
+      "field": "category",
+      "kind": "підтверджене порушення",
+      "problem": "пробіли на початку/в кінці значення",
+      "count": 1,
+      "ids": [
+        "S08-P000195"
+      ],
+      "impact": "окремі написання однієї категорії (' Lviv ' ≠ 'Lviv') ламають групування та порівняння",
+      "action": "обрізати пробіли за явним правилом нормалізації, оригінал зберегти",
+      "targets": [
+        "products"
+      ]
+    },
+    {
+      "file": "products.csv",
+      "field": "unit_price_uah",
+      "kind": "потенційний ризик",
+      "problem": "ціна ≤ 0 в активного товару",
+      "count": 1,
+      "ids": [
+        "S08-P000074"
+      ],
+      "impact": "потребує бізнес-уточнення; нуль не завжди помилка (для неактивного товару допустимий)",
+      "action": "за контрактом Лаби 2 активний товар із ціною ≤ 0 відхиляється",
+      "targets": [
+        "products"
+      ]
+    },
+    {
+      "file": "products.csv",
+      "field": "merchant_id",
+      "kind": "підтверджене порушення",
+      "problem": "посилання на відсутнього партнера",
+      "count": 1,
+      "ids": [
+        "S08-P000331"
+      ],
+      "impact": "порушення FK; INNER JOIN мовчки втратить товар",
+      "action": "карантин з причиною ORPHAN_MERCHANT_FK",
+      "targets": [
+        "products"
+      ]
+    },
+    {
+      "file": "orders.csv",
+      "field": "customer_id",
+      "kind": "підтверджене порушення",
+      "problem": "посилання на відсутнього клієнта",
+      "count": 1,
+      "ids": [
+        "S08-O0004825"
+      ],
+      "impact": "порушення FK; замовлення випаде зі звітів при INNER JOIN",
+      "action": "карантин з причиною ORPHAN_CUSTOMER_FK",
+      "targets": [
+        "orders"
+      ]
+    },
+    {
+      "file": "orders.csv",
+      "field": "merchant_id",
+      "kind": "підтверджене порушення",
+      "problem": "посилання на відсутнього партнера",
+      "count": 1,
+      "ids": [
+        "S08-O0005136"
+      ],
+      "impact": "порушення FK",
+      "action": "карантин з причиною ORPHAN_MERCHANT_FK",
+      "targets": [
+        "orders"
+      ]
+    },
+    {
+      "file": "orders.csv",
+      "field": "currency",
+      "kind": "підтверджене порушення",
+      "problem": "код валюти поза UAH/USD/EUR: 'UA H'",
+      "count": 1,
+      "ids": [
+        "S08-O0002449"
+      ],
+      "impact": "розбиття групування за валютою; суми різних валют не можна об'єднувати",
+      "action": "не виправляти здогадкою; відхиляти з причиною INVALID_CURRENCY",
+      "targets": [
+        "orders"
+      ]
+    },
+    {
+      "file": "orders.csv",
+      "field": "created_at",
+      "kind": "підтверджене порушення",
+      "problem": "значення не є ISO 8601: '04/09/2025 11:32'; '2026-19-45 25:61:00'",
+      "count": 2,
+      "ids": [
+        "S08-O0000044",
+        "S08-O0003385"
+      ],
+      "impact": "не приводяться до timestamptz автоматично; формат DD/MM/YYYY — лише припущення",
+      "action": "DD/MM/YYYY HH:MM явно читати як UTC, неможливі дати відхиляти (Лаба 2)",
+      "targets": [
+        "orders"
+      ]
+    },
+    {
+      "file": "orders.csv",
+      "field": "total_amount",
+      "kind": "потенційний ризик",
+      "problem": "subtotal + delivery_fee − discount ≠ total_amount",
+      "count": 1,
+      "ids": [
+        "S08-O0001712"
+      ],
+      "impact": "total_amount більший за обчислений на 137.17; причина невідома",
+      "action": "лише діагностика, значення джерела не переписувати",
+      "targets": [
+        "orders"
+      ]
+    }
+  ]
+}
