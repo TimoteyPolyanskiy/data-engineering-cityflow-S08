@@ -1,0 +1,11 @@
+    check_name     | difference_rows | result 
+-------------------+-----------------+--------
+ daily_exact_match |               0 | PASS
+(1 row)
+
+ currency | source_orders | report_orders | source_amount | report_amount | difference_count | difference_amount 
+----------+---------------+---------------+---------------+---------------+------------------+-------------------
+ EUR      |             3 |             3 |         22.13 |         22.13 |                0 |              0.00
+ UAH      |           342 |           342 |     194770.44 |     194770.44 |                0 |              0.00
+(2 rows)
+

@@ -1,0 +1,20 @@
+     check_name      | difference_rows | result 
+---------------------+-----------------+--------
+ running_exact_match |               0 | PASS
+(1 row)
+
+ daily_rows | running_rows 
+------------+--------------
+        284 |          284
+(1 row)
+
+        check_name        | difference_rows | result 
+--------------------------+-----------------+--------
+ latest_order_exact_match |               0 | PASS
+(1 row)
+
+ expected_customers | actual_rows 
+--------------------+-------------
+                294 |         294
+(1 row)
+

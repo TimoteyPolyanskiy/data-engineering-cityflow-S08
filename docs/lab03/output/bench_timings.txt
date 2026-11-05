@@ -1,0 +1,11 @@
+before warm-up: 0.355 ms (not counted)
+before run 1: 0.359 ms
+before run 2: 0.684 ms
+before run 3: 0.638 ms
+before median: 0.638 ms
+==> 07_bench_index
+after warm-up: 0.093 ms (not counted)
+after run 1: 0.097 ms
+after run 2: 0.086 ms
+after run 3: 0.088 ms
+after median: 0.088 ms

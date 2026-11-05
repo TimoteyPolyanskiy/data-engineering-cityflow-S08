@@ -1,0 +1,34 @@
+DO
+CREATE SCHEMA
+NOTICE:  schema "lab03_cf" already exists, skipping
+CREATE TABLE
+NOTICE:  relation "settings" already exists, skipping
+INSERT 0 0
+CREATE VIEW
+ date_from  |  date_to   | report_timezone 
+------------+------------+-----------------
+ 2025-09-01 | 2025-10-01 | Europe/Kyiv
+(1 row)
+
+    order_status    | currency | orders |  amount   
+--------------------+----------+--------+-----------
+ cancelled          | EUR      |      1 |      8.73
+ cancelled          | UAH      |     32 |  15362.04
+ delivered          | EUR      |      3 |     22.13
+ delivered          | UAH      |    342 | 194770.44
+ failed             | UAH      |      8 |   3406.06
+ partially_refunded | UAH      |     21 |  12275.60
+ partially_refunded | USD      |      1 |     29.07
+ refunded           | UAH      |     18 |  11371.54
+(8 rows)
+
+ accepted_orders 
+-----------------
+            5996
+(1 row)
+
+ accepted_items 
+----------------
+          14027
+(1 row)
+
