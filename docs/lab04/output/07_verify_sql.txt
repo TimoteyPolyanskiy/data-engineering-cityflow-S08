@@ -1,0 +1,45 @@
+ student_id |     source      | unique_records 
+------------+-----------------+----------------
+ S08        | delivery_events |           4064
+ S08        | order_items     |            966
+ S08        | orders          |            420
+(3 rows)
+
+                run_id                | status  |          started_at           |          finished_at          |                                                                                                                                                                         summary                                                                                                                                                                          |       error_code       
+--------------------------------------+---------+-------------------------------+-------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------
+ 493a2615-1438-428b-bf0b-83e1b6b4800e | FAILED  | 2026-11-05 08:37:13.725093+00 | 2026-11-05 08:37:14.228574+00 |                                                                                                                                                                                                                                                                                                                                                          | INJECTED_BEFORE_COMMIT
+ 3fdd023e-b4ee-469f-8e20-27a4d6bb88f7 | SUCCESS | 2026-11-05 08:37:20.793172+00 | 2026-11-05 08:37:21.237129+00 | {"orders": {"unique": 420, "inserted": 420, "received": 420, "already_present": 0, "duplicates_in_input": 0}, "order_items": {"unique": 966, "inserted": 966, "received": 966, "already_present": 0, "duplicates_in_input": 0}, "delivery_events": {"unique": 4064, "inserted": 4064, "received": 4064, "already_present": 0, "duplicates_in_input": 0}} | 
+ 80fa2c44-ac54-4626-b538-b31e8e355fcc | SUCCESS | 2026-11-05 08:37:21.653214+00 | 2026-11-05 08:37:22.061794+00 | {"orders": {"unique": 420, "inserted": 0, "received": 420, "already_present": 420, "duplicates_in_input": 0}, "order_items": {"unique": 966, "inserted": 0, "received": 966, "already_present": 966, "duplicates_in_input": 0}, "delivery_events": {"unique": 4064, "inserted": 0, "received": 4064, "already_present": 4064, "duplicates_in_input": 0}} | 
+(3 rows)
+
+    record_key    |   order_id   |     event_type      |     occurred_at      
+------------------+--------------+---------------------+----------------------
+ S08-EVT000050285 | S08-O0006001 | order_created       | 2026-09-01T10:41:00Z
+ S08-EVT000050286 | S08-O0006001 | payment_confirmed   | 2026-09-01T10:42:00Z
+ S08-EVT000050287 | S08-O0006001 | merchant_accepted   | 2026-09-01T10:48:00Z
+ S08-EVT000050288 | S08-O0006001 | courier_assigned    | 2026-09-01T10:50:00Z
+ S08-EVT000050289 | S08-O0006001 | preparation_started | 2026-09-01T10:52:00Z
+ S08-EVT000050290 | S08-O0006001 | ready_for_pickup    | 2026-09-01T11:01:00Z
+ S08-EVT000050291 | S08-O0006001 | courier_picked_up   | 2026-09-01T11:05:00Z
+ S08-EVT000050292 | S08-O0006001 | courier_arrived     | 2026-09-01T11:19:00Z
+ S08-EVT000050293 | S08-O0006001 | delivered           | 2026-09-01T11:24:00Z
+ S08-EVT000050294 | S08-O0006002 | order_created       | 2026-09-01T10:46:19Z
+(10 rows)
+
+                run_id                | status  | records_first_inserted_by_run 
+--------------------------------------+---------+-------------------------------
+ 493a2615-1438-428b-bf0b-83e1b6b4800e | FAILED  |                             0
+ 3fdd023e-b4ee-469f-8e20-27a4d6bb88f7 | SUCCESS |                          5450
+ 80fa2c44-ac54-4626-b538-b31e8e355fcc | SUCCESS |                             0
+(3 rows)
+
+ distinct_event_ids | rows 
+--------------------+------
+               4064 | 4064
+(1 row)
+
+ core_orders | core_items 
+-------------+------------
+        5996 |      14027
+(1 row)
+

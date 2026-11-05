@@ -1,0 +1,17 @@
+$ python src/lab04/main.py api
+{
+  "run_id": "105767f9-25ab-4ffc-8dfd-f970a0b9d461",
+  "student_id": "S08",
+  "status": "EXTRACTED_ONLY",
+  "command": "api",
+  "api_pages": 41,
+  "api_total_count": 4064,
+  "sources": {
+    "delivery_events": {
+      "received": 4064,
+      "unique": 4064,
+      "duplicates_in_input": 0
+    }
+  }
+}
+exit=0

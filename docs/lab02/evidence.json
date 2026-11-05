@@ -1,0 +1,136 @@
+{
+  "idempotency": {
+    "run_1": 22,
+    "run_2": 23,
+    "state_equal": true,
+    "state_run_1": {
+      "counts": {
+        "customers": 800,
+        "merchants": 42,
+        "products": 531,
+        "orders": 5996,
+        "order_items": 14027
+      },
+      "key_md5": {
+        "customers": "da4d55524d104afccbaa2be75778f687",
+        "merchants": "7cc35a5d848f8a52fa50fbf11f6a444b",
+        "products": "6b620b826d65d57c2ee619cc49ed4b96",
+        "orders": "6390824fa5c278e03c6d53c53b9f2784",
+        "order_items": "dd5d65c8edd4d928e8e0fa51f62b398e"
+      },
+      "orders_by_currency": {
+        "EUR": {
+          "orders": 32,
+          "total_amount": "354.17"
+        },
+        "UAH": {
+          "orders": 5924,
+          "total_amount": "3619371.87"
+        },
+        "USD": {
+          "orders": 40,
+          "total_amount": "575.10"
+        }
+      },
+      "items_by_currency": {
+        "EUR": {
+          "items": 71,
+          "line_total": "305.42"
+        },
+        "UAH": {
+          "items": 13869,
+          "line_total": "3179134.01"
+        },
+        "USD": {
+          "items": 87,
+          "line_total": "511.46"
+        }
+      }
+    },
+    "state_run_2": {
+      "counts": {
+        "customers": 800,
+        "merchants": 42,
+        "products": 531,
+        "orders": 5996,
+        "order_items": 14027
+      },
+      "key_md5": {
+        "customers": "da4d55524d104afccbaa2be75778f687",
+        "merchants": "7cc35a5d848f8a52fa50fbf11f6a444b",
+        "products": "6b620b826d65d57c2ee619cc49ed4b96",
+        "orders": "6390824fa5c278e03c6d53c53b9f2784",
+        "order_items": "dd5d65c8edd4d928e8e0fa51f62b398e"
+      },
+      "orders_by_currency": {
+        "EUR": {
+          "orders": 32,
+          "total_amount": "354.17"
+        },
+        "UAH": {
+          "orders": 5924,
+          "total_amount": "3619371.87"
+        },
+        "USD": {
+          "orders": 40,
+          "total_amount": "575.10"
+        }
+      },
+      "items_by_currency": {
+        "EUR": {
+          "items": 71,
+          "line_total": "305.42"
+        },
+        "UAH": {
+          "items": 13869,
+          "line_total": "3179134.01"
+        },
+        "USD": {
+          "items": 87,
+          "line_total": "511.46"
+        }
+      }
+    },
+    "decisions_equal": true
+  },
+  "rollback": {
+    "injected": "INSERT у core.order_items з quantity = -1 після TRUNCATE та вставки нових рядків",
+    "failed_run_id": 24,
+    "failed_status": "FAILED",
+    "error_message": "CheckViolation: new row for relation \"order_items\" violates check constraint \"order_items_quantity_check\"\nDETAIL:  Failing row contains (TEST-NEG-QTY, S08-O0000001, S08-P000373, -1, 1.00, 0.00, 1.00, UAH).",
+    "state_before": {
+      "customers": 800,
+      "merchants": 42,
+      "products": 531,
+      "orders": 5996,
+      "order_items": 14027
+    },
+    "state_after": {
+      "customers": 800,
+      "merchants": 42,
+      "products": 531,
+      "orders": 5996,
+      "order_items": 14027
+    },
+    "state_equal": true,
+    "recovery_run_id": 25
+  },
+  "wrong_header": {
+    "run_id": 26,
+    "status": "FAILED",
+    "error_message": "ValueError: Порушення схеми CSV у customers.csv. Очікувалось: ['customer_id', 'full_name', 'email', 'phone', 'city', 'service_zone_id', 'registered_at', 'customer_status'], отримано: ['invalid_col1', ",
+    "core_unchanged": true
+  },
+  "missing_file": {
+    "run_id": 27,
+    "status": "FAILED",
+    "error_message": "FileNotFoundError: Обов'язковий файл /tmp/pytest-of-tim/pytest-34/test_missing_required_file_sto0/orders.csv відсутній.",
+    "core_unchanged": true
+  },
+  "changed_batch_content": {
+    "run_id": 29,
+    "status": "FAILED",
+    "error_message": "ValueError: Вміст orders.csv змінився під тим самим batch_id=S08-V1: було 42547e764160…, стало ffd3a3800e9f…. Використайте новий batch_id.",
+    "core_unchanged": true
+  }
+}

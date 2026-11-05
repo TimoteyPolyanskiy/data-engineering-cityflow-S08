@@ -1,0 +1,45 @@
+=== 1. Дублікати PK у core (очікується 0 рядків) ===
+ target_table | duplicate_key | n 
+--------------+---------------+---
+(0 rows)
+
+=== 2. Відсутні FK у core (очікується 0 у кожному рядку) ===
+       foreign_key       | missing 
+-------------------------+---------
+ orders -> customers     |       0
+ orders -> merchants     |       0
+ products -> merchants   |       0
+ order_items -> orders   |       0
+ order_items -> products |       0
+(5 rows)
+
+=== 3a. orders: прийняте у staging vs core, окремо за валютами ===
+ currency | stg_rows | core_rows | stg_total  | core_total | match 
+----------+----------+-----------+------------+------------+-------
+ EUR      |       32 |        32 |     354.17 |     354.17 | t
+ UAH      |     5924 |      5924 | 3619371.87 | 3619371.87 | t
+ USD      |       40 |        40 |     575.10 |     575.10 | t
+(3 rows)
+
+=== 3b. order_items: прийняте у staging vs core, окремо за валютами ===
+ currency | stg_rows | core_rows | stg_total  | core_total | match 
+----------+----------+-----------+------------+------------+-------
+ EUR      |       71 |        71 |     305.42 |     305.42 | t
+ UAH      |    13869 |     13869 | 3179134.01 | 3179134.01 | t
+ USD      |       87 |        87 |     511.46 |     511.46 | t
+(3 rows)
+
+=== 4. Fan-out: завищена сума після JOIN та правильний запит (за валютами, без DISTINCT) ===
+ currency | order_rows | joined_rows |  true_sum  | inflated_sum | orders_with_items | orders_total | items_total 
+----------+------------+-------------+------------+--------------+-------------------+--------------+-------------
+ EUR      |         32 |          71 |     354.17 |       956.78 |                32 |       354.17 |      305.42
+ UAH      |       5924 |       13869 | 3619371.87 |  10273021.62 |              5922 |   3618934.66 |  3179134.01
+ USD      |         40 |          87 |     575.10 |      1611.21 |                40 |       575.10 |      511.46
+(3 rows)
+
+=== Діагностика (значення джерела не змінюються): subtotal + delivery_fee - discount <> total ===
+   order_id   | currency | subtotal_amount | delivery_fee | discount_amount | total_amount | difference 
+--------------+----------+-----------------+--------------+-----------------+--------------+------------
+ S08-O0001712 | UAH      |          494.15 |        80.73 |            0.00 |       712.05 |    -137.17
+(1 row)
+

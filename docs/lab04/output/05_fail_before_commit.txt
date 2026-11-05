@@ -1,0 +1,126 @@
+== before (staging rows of lab 4)
+ lab04_records 
+---------------
+             0
+(1 row)
+
+ lab04_runs 
+------------
+          0
+(1 row)
+
+ core_orders | core_items 
+-------------+------------
+        5996 |      14027
+(1 row)
+
+$ python src/lab04/main.py run --fail-before-commit
+2026-11-05 10:37:13,746 INFO file batch: {'orders': 420, 'order_items': 966}
+2026-11-05 10:37:13,759 INFO attempt 1: HTTP 200
+2026-11-05 10:37:13,760 INFO page 1: count=100, total_count=4064, received so far=100
+2026-11-05 10:37:13,771 INFO attempt 1: HTTP 200
+2026-11-05 10:37:13,772 INFO page 2: count=100, total_count=4064, received so far=200
+2026-11-05 10:37:13,782 INFO attempt 1: HTTP 200
+2026-11-05 10:37:13,782 INFO page 3: count=100, total_count=4064, received so far=300
+2026-11-05 10:37:13,789 INFO attempt 1: HTTP 200
+2026-11-05 10:37:13,790 INFO page 4: count=100, total_count=4064, received so far=400
+2026-11-05 10:37:13,795 INFO attempt 1: HTTP 200
+2026-11-05 10:37:13,795 INFO page 5: count=100, total_count=4064, received so far=500
+2026-11-05 10:37:13,800 INFO attempt 1: HTTP 200
+2026-11-05 10:37:13,801 INFO page 6: count=100, total_count=4064, received so far=600
+2026-11-05 10:37:13,806 INFO attempt 1: HTTP 200
+2026-11-05 10:37:13,807 INFO page 7: count=100, total_count=4064, received so far=700
+2026-11-05 10:37:13,813 INFO attempt 1: HTTP 200
+2026-11-05 10:37:13,814 INFO page 8: count=100, total_count=4064, received so far=800
+2026-11-05 10:37:13,819 INFO attempt 1: HTTP 200
+2026-11-05 10:37:13,820 INFO page 9: count=100, total_count=4064, received so far=900
+2026-11-05 10:37:13,825 INFO attempt 1: HTTP 200
+2026-11-05 10:37:13,825 INFO page 10: count=100, total_count=4064, received so far=1000
+2026-11-05 10:37:13,830 INFO attempt 1: HTTP 200
+2026-11-05 10:37:13,830 INFO page 11: count=100, total_count=4064, received so far=1100
+2026-11-05 10:37:13,835 INFO attempt 1: HTTP 200
+2026-11-05 10:37:13,835 INFO page 12: count=100, total_count=4064, received so far=1200
+2026-11-05 10:37:13,840 INFO attempt 1: HTTP 200
+2026-11-05 10:37:13,840 INFO page 13: count=100, total_count=4064, received so far=1300
+2026-11-05 10:37:13,845 INFO attempt 1: HTTP 200
+2026-11-05 10:37:13,845 INFO page 14: count=100, total_count=4064, received so far=1400
+2026-11-05 10:37:13,850 INFO attempt 1: HTTP 200
+2026-11-05 10:37:13,851 INFO page 15: count=100, total_count=4064, received so far=1500
+2026-11-05 10:37:13,856 INFO attempt 1: HTTP 200
+2026-11-05 10:37:13,856 INFO page 16: count=100, total_count=4064, received so far=1600
+2026-11-05 10:37:13,861 INFO attempt 1: HTTP 200
+2026-11-05 10:37:13,861 INFO page 17: count=100, total_count=4064, received so far=1700
+2026-11-05 10:37:13,866 INFO attempt 1: HTTP 200
+2026-11-05 10:37:13,866 INFO page 18: count=100, total_count=4064, received so far=1800
+2026-11-05 10:37:13,871 INFO attempt 1: HTTP 200
+2026-11-05 10:37:13,872 INFO page 19: count=100, total_count=4064, received so far=1900
+2026-11-05 10:37:13,877 INFO attempt 1: HTTP 200
+2026-11-05 10:37:13,877 INFO page 20: count=100, total_count=4064, received so far=2000
+2026-11-05 10:37:13,882 INFO attempt 1: HTTP 200
+2026-11-05 10:37:13,882 INFO page 21: count=100, total_count=4064, received so far=2100
+2026-11-05 10:37:13,887 INFO attempt 1: HTTP 200
+2026-11-05 10:37:13,887 INFO page 22: count=100, total_count=4064, received so far=2200
+2026-11-05 10:37:13,892 INFO attempt 1: HTTP 200
+2026-11-05 10:37:13,892 INFO page 23: count=100, total_count=4064, received so far=2300
+2026-11-05 10:37:13,897 INFO attempt 1: HTTP 200
+2026-11-05 10:37:13,898 INFO page 24: count=100, total_count=4064, received so far=2400
+2026-11-05 10:37:13,902 INFO attempt 1: HTTP 200
+2026-11-05 10:37:13,903 INFO page 25: count=100, total_count=4064, received so far=2500
+2026-11-05 10:37:13,907 INFO attempt 1: HTTP 200
+2026-11-05 10:37:13,908 INFO page 26: count=100, total_count=4064, received so far=2600
+2026-11-05 10:37:13,912 INFO attempt 1: HTTP 200
+2026-11-05 10:37:13,913 INFO page 27: count=100, total_count=4064, received so far=2700
+2026-11-05 10:37:13,918 INFO attempt 1: HTTP 200
+2026-11-05 10:37:13,918 INFO page 28: count=100, total_count=4064, received so far=2800
+2026-11-05 10:37:13,923 INFO attempt 1: HTTP 200
+2026-11-05 10:37:13,923 INFO page 29: count=100, total_count=4064, received so far=2900
+2026-11-05 10:37:13,928 INFO attempt 1: HTTP 200
+2026-11-05 10:37:13,929 INFO page 30: count=100, total_count=4064, received so far=3000
+2026-11-05 10:37:13,933 INFO attempt 1: HTTP 200
+2026-11-05 10:37:13,934 INFO page 31: count=100, total_count=4064, received so far=3100
+2026-11-05 10:37:13,938 INFO attempt 1: HTTP 200
+2026-11-05 10:37:13,939 INFO page 32: count=100, total_count=4064, received so far=3200
+2026-11-05 10:37:13,943 INFO attempt 1: HTTP 200
+2026-11-05 10:37:13,946 INFO page 33: count=100, total_count=4064, received so far=3300
+2026-11-05 10:37:13,952 INFO attempt 1: HTTP 200
+2026-11-05 10:37:13,952 INFO page 34: count=100, total_count=4064, received so far=3400
+2026-11-05 10:37:13,958 INFO attempt 1: HTTP 200
+2026-11-05 10:37:13,958 INFO page 35: count=100, total_count=4064, received so far=3500
+2026-11-05 10:37:13,964 INFO attempt 1: HTTP 200
+2026-11-05 10:37:13,964 INFO page 36: count=100, total_count=4064, received so far=3600
+2026-11-05 10:37:13,969 INFO attempt 1: HTTP 200
+2026-11-05 10:37:13,969 INFO page 37: count=100, total_count=4064, received so far=3700
+2026-11-05 10:37:13,974 INFO attempt 1: HTTP 200
+2026-11-05 10:37:13,975 INFO page 38: count=100, total_count=4064, received so far=3800
+2026-11-05 10:37:13,979 INFO attempt 1: HTTP 200
+2026-11-05 10:37:13,980 INFO page 39: count=100, total_count=4064, received so far=3900
+2026-11-05 10:37:13,985 INFO attempt 1: HTTP 200
+2026-11-05 10:37:13,985 INFO page 40: count=100, total_count=4064, received so far=4000
+2026-11-05 10:37:13,990 INFO attempt 1: HTTP 200
+2026-11-05 10:37:13,990 INFO page 41: count=64, total_count=4064, received so far=4064
+2026-11-05 10:37:14,237 ERROR run_id=493a2615-1438-428b-bf0b-83e1b6b4800e failed: INJECTED_BEFORE_COMMIT; raw збережено. Перевірте реалізацію та tests.
+exit=1
+== after failed run
+ lab04_records 
+---------------
+             0
+(1 row)
+
+ student_id | source | unique_records 
+------------+--------+----------------
+(0 rows)
+
+                run_id                | status |          started_at           |          finished_at          | summary |       error_code       
+--------------------------------------+--------+-------------------------------+-------------------------------+---------+------------------------
+ 493a2615-1438-428b-bf0b-83e1b6b4800e | FAILED | 2026-11-05 08:37:13.725093+00 | 2026-11-05 08:37:14.228574+00 |         | INJECTED_BEFORE_COMMIT
+(1 row)
+
+ record_key | order_id | event_type | occurred_at 
+------------+----------+------------+-------------
+(0 rows)
+
+                run_id                | status | records_first_inserted_by_run 
+--------------------------------------+--------+-------------------------------
+ 493a2615-1438-428b-bf0b-83e1b6b4800e | FAILED |                             0
+(1 row)
+

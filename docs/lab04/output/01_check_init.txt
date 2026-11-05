@@ -1,0 +1,6 @@
+$ python src/lab04/main.py check
+API доступний; student_id збігається.
+exit=0
+$ python src/lab04/main.py init-db
+Створено об’єкти ЛР4. Попередні дані не змінено.
+exit=0

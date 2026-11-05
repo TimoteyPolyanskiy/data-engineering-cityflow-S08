@@ -14,3 +14,11 @@ __pycache__/
 *.zip
 *.dump
 *.sql.gz
+
+# Лаба 4: варіант із секретами, локальна конфігурація та raw-копії (правила з .gitignore.lab04)
+.env.lab04
+data/lab04_variant/
+data/raw/lab04/
+credentials.env
+api_keys.json
+*.log

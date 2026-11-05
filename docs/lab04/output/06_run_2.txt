@@ -1,0 +1,50 @@
+$ python src/lab04/main.py run   # run 2
+2026-11-05 10:37:21,666 INFO file batch: {'orders': 420, 'order_items': 966}
+{
+  "run_id": "80fa2c44-ac54-4626-b538-b31e8e355fcc",
+  "student_id": "S08",
+  "status": "SUCCESS",
+  "command": "run",
+  "file_sha256": "84017962ee62af3ba7c05c2108fd518eab5457fce5b4356a0068353d3ae3744c",
+  "api_pages": 41,
+  "api_total_count": 4064,
+  "sources": {
+    "orders": {
+      "received": 420,
+      "unique": 420,
+      "duplicates_in_input": 0,
+      "inserted": 0,
+      "already_present": 420
+    },
+    "order_items": {
+      "received": 966,
+      "unique": 966,
+      "duplicates_in_input": 0,
+      "inserted": 0,
+      "already_present": 966
+    },
+    "delivery_events": {
+      "received": 4064,
+      "unique": 4064,
+      "duplicates_in_input": 0,
+      "inserted": 0,
+      "already_present": 4064
+    }
+  }
+}
+exit=0
+$ python src/lab04/main.py verify
+{
+  "ok": true,
+  "expected": {
+    "orders": 420,
+    "order_items": 966,
+    "delivery_events": 4064
+  },
+  "actual": {
+    "order_items": 966,
+    "delivery_events": 4064,
+    "orders": 420
+  }
+}
+exit=0

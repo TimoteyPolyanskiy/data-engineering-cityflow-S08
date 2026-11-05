@@ -1,0 +1,42 @@
+$ python -m pytest -q tests/lab04 -k "retry or timeout or attempts or tls"
+...........                                                              [100%]
+11 passed, 15 deselected in 0.05s
+exit=0
+$ python -m pytest -v tests/lab04
+============================= test session starts ==============================
+platform linux -- Python 3.14.7, pytest-9.1.1, pluggy-1.7.0 -- /home/tim/uni/sem_1/data-engineering-cityflow-S08/.venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/tim/uni/sem_1/data-engineering-cityflow-S08
+configfile: pyproject.toml
+plugins: anyio-4.15.1
+collecting ... collected 26 items
+
+tests/lab04/test_ingestion.py::test_file_valid_preserves_strings PASSED  [  3%]
+tests/lab04/test_ingestion.py::test_file_rejects_structural_problem[missing] PASSED [  7%]
+tests/lab04/test_ingestion.py::test_file_rejects_structural_problem[checksum] PASSED [ 11%]
+tests/lab04/test_ingestion.py::test_file_rejects_structural_problem[header] PASSED [ 15%]
+tests/lab04/test_ingestion.py::test_file_rejects_other_student PASSED    [ 19%]
+tests/lab04/test_ingestion.py::test_retry_server_error PASSED            [ 23%]
+tests/lab04/test_ingestion.py::test_retry_after PASSED                   [ 26%]
+tests/lab04/test_ingestion.py::test_no_retry_permanent_or_redirect[400] PASSED [ 30%]
+tests/lab04/test_ingestion.py::test_no_retry_permanent_or_redirect[401] PASSED [ 34%]
+tests/lab04/test_ingestion.py::test_no_retry_permanent_or_redirect[403] PASSED [ 38%]
+tests/lab04/test_ingestion.py::test_no_retry_permanent_or_redirect[404] PASSED [ 42%]
+tests/lab04/test_ingestion.py::test_no_retry_permanent_or_redirect[422] PASSED [ 46%]
+tests/lab04/test_ingestion.py::test_no_retry_permanent_or_redirect[301] PASSED [ 50%]
+tests/lab04/test_ingestion.py::test_timeout_then_success PASSED          [ 53%]
+tests/lab04/test_ingestion.py::test_four_failed_attempts PASSED          [ 57%]
+tests/lab04/test_ingestion.py::test_tls_error_not_retried PASSED         [ 61%]
+tests/lab04/test_ingestion.py::test_pagination_follows_cursor_not_page_size PASSED [ 65%]
+tests/lab04/test_ingestion.py::test_pagination_detects_invalid_envelope[change0] PASSED [ 69%]
+tests/lab04/test_ingestion.py::test_pagination_detects_invalid_envelope[change1] PASSED [ 73%]
+tests/lab04/test_ingestion.py::test_pagination_detects_invalid_envelope[change2] PASSED [ 76%]
+tests/lab04/test_ingestion.py::test_pagination_detects_invalid_envelope[change3] PASSED [ 80%]
+tests/lab04/test_ingestion.py::test_pagination_detects_invalid_envelope[change4] PASSED [ 84%]
+tests/lab04/test_ingestion.py::test_repeated_cursor_stops PASSED         [ 88%]
+tests/lab04/test_ingestion.py::test_changed_total_stops PASSED           [ 92%]
+tests/lab04/test_ingestion.py::test_partial_api_failure_is_not_empty_success PASSED [ 96%]
+tests/lab04/test_ingestion.py::test_deduplication_and_conflict PASSED    [100%]
+
+============================== 26 passed in 0.08s ==============================
+exit=0
