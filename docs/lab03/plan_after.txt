@@ -1,0 +1,20 @@
+                                                                      QUERY PLAN                                                                      
+------------------------------------------------------------------------------------------------------------------------------------------------------
+ Index Scan using idx_lab03_cf_bench_merchant_created on bench_orders  (cost=62.38..70.41 rows=1 width=27) (actual time=0.027..0.033 rows=29 loops=1)
+   Index Cond: ((merchant_id = $0) AND (created_at >= $1) AND (created_at < $2))
+   Buffers: shared hit=9
+   InitPlan 1 (returns $0)
+     ->  Seq Scan on bench_parameters  (cost=0.00..20.70 rows=1070 width=32) (actual time=0.003..0.003 rows=1 loops=1)
+           Buffers: shared hit=1
+   InitPlan 2 (returns $1)
+     ->  Seq Scan on bench_parameters bench_parameters_1  (cost=0.00..20.70 rows=1070 width=8) (actual time=0.000..0.001 rows=1 loops=1)
+           Buffers: shared hit=1
+   InitPlan 3 (returns $2)
+     ->  Seq Scan on bench_parameters bench_parameters_2  (cost=0.00..20.70 rows=1070 width=8) (actual time=0.000..0.000 rows=1 loops=1)
+           Buffers: shared hit=1
+ Planning:
+   Buffers: shared hit=95
+ Planning Time: 0.376 ms
+ Execution Time: 0.088 ms
+(16 rows)
+

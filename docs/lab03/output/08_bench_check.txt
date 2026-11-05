@@ -1,0 +1,5 @@
+      check_name       | difference_rows | result 
+-----------------------+-----------------+--------
+ benchmark_same_result |               0 | PASS
+(1 row)
+

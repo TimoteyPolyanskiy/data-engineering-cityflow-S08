@@ -1,0 +1,7 @@
+CREATE INDEX
+ANALYZE
+              indexname              |                                                    indexdef                                                     
+-------------------------------------+-----------------------------------------------------------------------------------------------------------------
+ idx_lab03_cf_bench_merchant_created | CREATE INDEX idx_lab03_cf_bench_merchant_created ON lab03_cf.bench_orders USING btree (merchant_id, created_at)
+(1 row)
+

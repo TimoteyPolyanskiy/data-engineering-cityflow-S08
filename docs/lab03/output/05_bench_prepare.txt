@@ -1,0 +1,29 @@
+NOTICE:  table "bench_before" does not exist, skipping
+DROP TABLE
+NOTICE:  table "bench_orders" does not exist, skipping
+DROP TABLE
+NOTICE:  table "bench_parameters" does not exist, skipping
+DROP TABLE
+SELECT 5996
+SELECT 1
+ANALYZE
+SELECT 29
+ merchant_id |       time_from        |        time_to         
+-------------+------------------------+------------------------
+ S08-M00016  | 2025-08-31 21:00:00+00 | 2025-09-30 21:00:00+00
+(1 row)
+
+ benchmark_rows 
+----------------
+           5996
+(1 row)
+
+ matching_rows 
+---------------
+            29
+(1 row)
+
+ indexname | indexdef 
+-----------+----------
+(0 rows)
+
