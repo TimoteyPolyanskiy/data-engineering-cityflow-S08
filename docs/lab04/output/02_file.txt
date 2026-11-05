@@ -1,0 +1,26 @@
+$ python -m pytest -q tests/lab04 -k file
+.....                                                                    [100%]
+5 passed, 21 deselected in 0.05s
+exit=0
+$ python src/lab04/main.py file
+2026-11-05 10:36:43,174 INFO file batch: {'orders': 420, 'order_items': 966}
+{
+  "run_id": "f2fca460-64d7-49b9-b87e-f37daed367ed",
+  "student_id": "S08",
+  "status": "EXTRACTED_ONLY",
+  "command": "file",
+  "file_sha256": "84017962ee62af3ba7c05c2108fd518eab5457fce5b4356a0068353d3ae3744c",
+  "sources": {
+    "orders": {
+      "received": 420,
+      "unique": 420,
+      "duplicates_in_input": 0
+    },
+    "order_items": {
+      "received": 966,
+      "unique": 966,
+      "duplicates_in_input": 0
+    }
+  }
+}
+exit=0
